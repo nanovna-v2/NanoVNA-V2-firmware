@@ -284,11 +284,6 @@ show_version(void)
   ili9341_drawstring("Compiler: " PORT_COMPILER_NAME, x, y += step);
   ili9341_drawstring("Port Info: " PORT_INFO, x, y += step);
   ili9341_drawstring("Board: " BOARD_NAME, x, y += step);
-  if(cpu_enable_fpu())
-      fpu = "Has FPU: yes";
-  else
-      fpu = "Has FPU: no";
-  ili9341_drawstring(fpu, x, y += step);
 
   while (true) {
     UIEvent evt = uiWaitEvent();
